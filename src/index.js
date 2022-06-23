@@ -1,43 +1,43 @@
-module.exports = function toReadable (number) {
+let units = [
+  '',              // zero
+  'one',
+  'two',
+  'three',
+  'four',
+  'five',
+  'six',
+  'seven',
+  'eight',
+  'nine'
+]
 
-  let units = [
-      '',              // zero
-      'one',
-      'two',
-      'three',
-      'four',
-      'five',
-      'six',
-      'seven',
-      'eight',
-      'nine'
-    ]
-    
-    let tens = [
-      '',              // units (first ten name)
-      '',              // specialTen (second ten name)
-      'twenty',
-      'thirty',
-      'forty',
-      'fifty',
-      'sixty',
-      'seventy',
-      'eighty',
-      'ninety'
-    ]
-    
-    let specialTen = [
-      'ten',
-      'eleven',
-      'twelve',
-      'thirteen',
-      'fourteen',
-      'fifteen',
-      'sixteen',
-      'seventeen',
-      'eighteen',
-      'nineteen'
-    ]
+let tens = [
+  '',              // units (first ten name)
+  '',              // specialTen (second ten name)
+  'twenty',
+  'thirty',
+  'forty',
+  'fifty',
+  'sixty',
+  'seventy',
+  'eighty',
+  'ninety'
+]
+
+let specialTen = [
+  'ten',
+  'eleven',
+  'twelve',
+  'thirteen',
+  'fourteen',
+  'fifteen',
+  'sixteen',
+  'seventeen',
+  'eighteen',
+  'nineteen'
+]
+
+module.exports = function toReadable (number) {
 
   let humanReadableNumber;
   let digits = number.toString().split( '' );
@@ -73,5 +73,4 @@ module.exports = function toReadable (number) {
       return humanReadableNumber.trim();
 
     }
-    
 }
